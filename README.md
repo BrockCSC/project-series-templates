@@ -4,6 +4,9 @@ This repository contains templates for different styles of projects that may be 
 #NOTE
 Please note that these templates are strictly for the project series, and any other personal projects you wish to use them in. These templates are not to be used for assignments!
 
+#Getting Started with Github
+If you need help getting started with Github, please download our [instructional guide](https://drive.google.com/file/d/0B4JunSkTKIlKZGhuN1lqYUVhYmc/view) and follow the steps.
+
 #Setup
 Eclipse (After repository pulled):
   1. Open Eclipse
