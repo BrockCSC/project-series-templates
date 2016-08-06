@@ -15,5 +15,6 @@ Eclipse (After repository pulled):
   3. Select File > New > Java Project
   4. Where it asks for the project name type the name of the template you wish to use (ex. "RPG Animation Template")
   5. The project should now be set up and ready to use
+
 ### Other Language
   Please follow the steps in the project folder
