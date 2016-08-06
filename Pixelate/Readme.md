@@ -12,7 +12,7 @@ This program written in Python, and does basic image manipulation.
     - Different types of grayscale, sepia, other interesting filters
 
 ## Getting Started
-  1. Install Python
+  1. Install [Python](https://www.python.org/)
   2. Install the [Pillow](https://python-pillow.org/) library (Instructions [here](https://pillow.readthedocs.io/en/latest/installation.html))
   3. Open Command Prompt or Terminal and navigate to the Pixelate folder
   4. Type `python Main.py` and the program will run
