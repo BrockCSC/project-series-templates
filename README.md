@@ -22,7 +22,7 @@ Eclipse (After repository pulled):
 
 ## Current Projects
 | Project | Language |
-| :---:         |     :---:      |
-| RPG Animation Template   | Java     |
-| Paint Program    | Java       |
+| :---: | :---: |
+| RPG Animation Template | Java |
+| Paint Program Template | Java |
 | Pixelate | Python |
