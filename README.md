@@ -8,9 +8,12 @@ Please note that these templates are strictly for the project series, and any ot
 If you need help getting started with Github, please download our [instructional guide](https://drive.google.com/file/d/0B4JunSkTKIlKZGhuN1lqYUVhYmc/view) and follow the steps.
 
 #Setup
-Eclipse (After repository pulled):
-  1. Open Eclipse
-  2. Set the workspace to the file directory containing all of the subfolders (RPG Animation Template, etc.)
-  3. Select File > New > Java Project
-  4. Where it asks for the project name type the name of the template you wish to use (ex. "RPG Animation Template")
-  5. The project should now be set up and ready to use
+If program is in Java:
+  Eclipse (After repository pulled):
+    1. Open Eclipse
+    2. Set the workspace to the file directory containing all of the subfolders (RPG Animation Template, etc.)
+    3. Select File > New > Java Project
+    4. Where it asks for the project name type the name of the template you wish to use (ex. "RPG Animation Template")
+    5. The project should now be set up and ready to use
+If other language:
+  Please follow the steps in the project folder
