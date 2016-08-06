@@ -1,10 +1,12 @@
 package game;
 
 import java.awt.Dimension;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 import javax.swing.JFrame;
 
-public class Main {
+public class Main{
 	
 	public static final int SCREEN_WIDTH = 500, SCREEN_HEIGHT = 500;
 	
@@ -28,8 +30,6 @@ public class Main {
 		
 		// Adds the display that will display the game to the frame
 		f.add(new Display());
-		
-		
 	}
 	
 	
