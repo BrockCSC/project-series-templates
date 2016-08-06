@@ -20,4 +20,5 @@ This program written in Python, and does basic image manipulation.
 Note: At the current time you need to modify the parameters in the code to change the options
 
 Basic color information can be viewed [here](https://en.wikipedia.org/wiki/List_of_monochrome_and_RGB_palettes)
+
 Information of different types of grayscale techniques [here](http://www.tannerhelland.com/3643/grayscale-image-algorithm-vb6/)
