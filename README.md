@@ -18,3 +18,11 @@ Eclipse (After repository pulled):
 
 ### Other Language
   Please follow the steps in the project folder
+
+
+## Current Projects
+| Project | Language |
+| :---:         |     :---:      |
+| RPG Animation Template   | Java     |
+| Paint Program    | Java       |
+| Pixelate | Python |
