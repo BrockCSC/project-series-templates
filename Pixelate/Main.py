@@ -22,7 +22,7 @@ image = Image.open(input_root+image_name+image_ext)
 img_list = imgOps.convert_img_to_list(image)
 
 print ("Converting Image")
-new_img = filters.pixelate(img_list,5, filters.mean_col)#filters.convert_n_bit_image(img_list, bit_per_col, col_type)
+new_img = filters.pixelate(img_list, 5, filters.mean_col)#filters.convert_n_bit_image(img_list, bit_per_col, col_type)
 
 imgOps.save_image(new_img, output_root + image_name +"-"+ (str(bit_per_col*3) if col_type == "c" else str(bit_per_col)) + "bit" + ("-gray" if col_type == "g" else "-full"))
 print ("Image Saved")
