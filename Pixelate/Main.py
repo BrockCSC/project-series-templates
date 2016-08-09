@@ -3,15 +3,9 @@ import ImgOps as imgOps
 import Filters as filters
 import copy
 from math import *
-<<<<<<< HEAD
 from HelpMenu import *
-
 import sys
 print(sys.path)
-
-=======
-#import numpy
->>>>>>> 5557c188ca2b533b02c4d6bdbfb66aa6b9240e38
 
 bit_per_col = 5
 input_root = "Input/"
@@ -37,7 +31,7 @@ while True:
 		display_help = False
 
 	print ("Enter Command...\n")
-	command = raw_input()
+	command = input()
 	print ("\n")
 	command_parts = command.split(" ")
 	command_parts[0] = command_parts[0].lower()
