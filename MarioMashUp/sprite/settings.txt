@@ -1,2 +1,6 @@
 tiles-2.png static split 16
+<<<<<<< HEAD
 characters.png animated split 16
+=======
+characters.png animated split 16
+>>>>>>> 5557c188ca2b533b02c4d6bdbfb66aa6b9240e38
