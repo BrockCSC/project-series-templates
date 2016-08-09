@@ -40,6 +40,9 @@ public class Viewport extends Canvas implements Runnable {
 	
 	private Point topcorner;
 	
+	private int minYForDeath;
+	private static final boolean KILLFALLERS = true;
+	
 	
 	private boolean running;
 	private Thread thread;
@@ -57,7 +60,7 @@ public class Viewport extends Canvas implements Runnable {
 		for (int i = 0; i < numlayers; ++i)
 			layers.add(new ArrayList<>());
 		// Load the map in layers and entities
-		MapReader.readMap(new File("test-map.txt"), layers, entities);
+		minYForDeath = MapReader.readMap(new File("test-map.txt"), layers, entities);
 	}
 
 	public void start() {
@@ -103,6 +106,12 @@ public class Viewport extends Canvas implements Runnable {
 	 */
 	private void update(long delta) {
 		for(Entity e: entities) {
+			// If offscreen kill the Hero
+			if (KILLFALLERS && e instanceof Hero && e.getBoundingBox().getMaxY() > minYForDeath) {
+				((Hero) e).kill();
+
+				System.out.println("Killed");
+			}
 			Rectangle r = e.getBoundingBox();
 			for(ArrayList<Drawable> layer: layers) {
 				for(Drawable d: layer) {
@@ -110,7 +119,6 @@ public class Viewport extends Canvas implements Runnable {
 					if (d == e) {
 						continue;
 					}
-					// Only check collisions on objects onscreen
 					if (d instanceof Collidable && ((Collidable) d).getBoundingBox().intersects(r)) {
 						((Collidable) d).actionCollision(e);
 					}
@@ -142,6 +150,8 @@ public class Viewport extends Canvas implements Runnable {
 		safe.grow(-safewidth, 0);
 		// Check that all heros are within the viewport
 		for(Entity e: entities) {
+			if (!(e instanceof Hero)) continue;
+			
 			if (!safe.contains(e.getBoundingBox())) {
 				if (safe.getCenterX() > e.getBoundingBox().getCenterX()) { // Leaving from left
 					topcorner.x = e.getBoundingBox().x - safewidth;
