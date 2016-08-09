@@ -64,6 +64,8 @@ while True:
 	elif (command_parts[0] == "pixelate"):
 		if (command_parts[1].lower() == "help"):
 			pixelate_help()
+		elif (len(command_parts) != 3):
+			print("You have entered an invalid number of parameters. Type \'pixelate help\' for more details")
 		else:
 			img_list = imgOps.set_up_image(input_root, image_name, image_ext)
 			print ("Converting Image")
