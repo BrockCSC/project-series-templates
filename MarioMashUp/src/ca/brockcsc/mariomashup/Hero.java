@@ -32,7 +32,7 @@ import ca.brockcsc.mariomashup.KeyManager.Keys;
  * @since Aug 6, 2016
  */
 public class Hero implements Entity {
-	private static final String DEATH_FRAME_IMAGE = "characters-4-l";
+	private static final String DEATH_FRAME_IMAGE = "characters-6-l";
 	private static final double SPRINT_ACCEL = 120.0;
 	private static final int WALK_MAX_SPEED = 64;
 	private static final int RUN_MAX_SPEED = 128;
@@ -244,7 +244,7 @@ public class Hero implements Entity {
 			framen = 1;
 		}
 		if (isDieing) {
-			BufferedImage bf = GraphicManagerSingleton.getInstance().retrieveImageFrame(DEATH_FRAME_IMAGE, 13);
+			BufferedImage bf = GraphicManagerSingleton.getInstance().retrieveImageFrame(DEATH_FRAME_IMAGE, 7);
 			graphics.drawImage(bf, (int)locx - viewport.x, (int)locy - viewport.y - (crouching ? 16 : 0), null);
 		} else {
 			BufferedImage bf = GraphicManagerSingleton.getInstance().retrieveImageFrame(
@@ -258,18 +258,29 @@ public class Hero implements Entity {
 		
 	}
 
+	/**
+	 * Kill the hero actor, play animation
+	 */
+	public void kill() {
+		isDieing = true;
+		accx = 0;
+		accy = FALL_ACCELERATION;
+		velx = 0;
+		vely = -JUMP_ACCELERATION*1.5;
+	}
+	
+	/**
+	 * If big, make small
+	 * if small, kill
+	 */
 	public void doDamage() {
 		if (!hasIFrames) {
 			if (big) {
 				big = !big;
 				isShrinking = true;
 				hasIFrames = true;
-			} else {
-				isDieing = true;
-				accx = 0;
-				accy = FALL_ACCELERATION;
-				velx = 0;
-				vely = -JUMP_ACCELERATION*1.5;
+			} else if (!isDieing) {
+				kill();
 			}
 		}
 		

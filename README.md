@@ -25,13 +25,15 @@ This table is referencing the status of the basic code we are providing
 
 :white_check_mark: - Ready to use
 
-:warning: - in progress - incomplete but stable
+:warning: - In Progress - incomplete but relatively stable
 
-:x: - not ready to use
+:x: - Not Ready to use
 
 
-| Project | Language | Status |
-| :---: | :---: | :---: |
-| RPG Animation Template | Java | :x: |
-| Paint Program Template | Java | :x: |
-| Pixelate | Python | :warning: |
+| Project | Language | Status | Entry Point|
+| :---: | :---: | :---: | :---: |
+| Pixelate | Python | :warning: | Main.py |
+| MarioMashUp | Java | :warning: | MarioWindow.java | 
+| RPG Animation Template | Java | :x: | Main.java |
+| Paint Program Template | Java | :x: | Main.java |
+

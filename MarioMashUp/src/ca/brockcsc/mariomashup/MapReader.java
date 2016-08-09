@@ -32,7 +32,8 @@ import java.util.Scanner;
  */
 public class MapReader {
 
-	static void readMap(File f, ArrayList<ArrayList<Drawable>> into, ArrayList<Entity> entities) {
+	static int readMap(File f, ArrayList<ArrayList<Drawable>> into, ArrayList<Entity> entities) {
+		int maxY = Integer.MAX_VALUE;
 		Scanner s = null;
 		try {
 			s = new Scanner(f);
@@ -80,5 +81,7 @@ public class MapReader {
 		} catch (Exception e) {
 			throw new RuntimeException("Error occured when reading characters from map", e);
 		}
+		maxY = rows * 16 + 16;
+		return maxY;
 	}
 }

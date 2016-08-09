@@ -29,7 +29,7 @@ def save_image(values, name):
     # Creates a new image with the same size as the old one
     image = Image.new('RGB', (len(values[0]), len(values)))
     # DOES SOMETHING. i STILL NEED TO FIGURE OUT WHAT
-    values = [item for sublist in values for item in sublist]
+    values = [(int(r),int(g),int(b)) for sublist in values for (r,g,b) in sublist]
     # Writes the data to the new image
     image.putdata(values)
     # Saves the image
