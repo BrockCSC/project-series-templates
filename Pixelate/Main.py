@@ -3,7 +3,7 @@ import ImgOps as imgOps
 import Filters as filters
 import copy
 from math import *
-import numpy
+#import numpy
 
 bit_per_col = 5
 input_root = "Input/"
