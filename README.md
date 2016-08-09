@@ -25,7 +25,7 @@ This table is referencing the status of the basic code we are providing
 
 :white_check_mark: - Ready to use
 
-:warning: - in progress - incomplete but stable
+:warning: - in progress - incomplete but relatively stable
 
 :x: - not ready to use
 
