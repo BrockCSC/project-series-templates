@@ -21,8 +21,8 @@ Eclipse (After repository pulled):
 
 
 ## Current Projects
-| Project | Language |
-| :---: | :---: |
-| RPG Animation Template | Java |
-| Paint Program Template | Java |
-| Pixelate | Python |
+| Project | Language | Status |
+| :---: | :---: | :---: |
+| RPG Animation Template | Java | `In Progress` |
+| Paint Program Template | Java | `In Progress` |
+| Pixelate | Python | ```Functional``` |
