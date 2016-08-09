@@ -30,8 +30,9 @@ This table is referencing the status of the basic code we are providing
 :x: - not ready to use
 
 
-| Project | Language | Status |
+| Project | Language | Status | Entry Point|
 | :---: | :---: | :---: |
-| RPG Animation Template | Java | :x: |
-| Paint Program Template | Java | :x: |
-| Pixelate | Python | :warning: |
+| RPG Animation Template | Java | :x: | Main.java |
+| Paint Program Template | Java | :x: | Main.java |
+| Pixelate | Python | :warning: | Main.py |
+| MarioMashUp | Java | :warning: | MarioWindow.java | 
