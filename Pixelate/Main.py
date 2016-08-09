@@ -1,10 +1,13 @@
-from PIL import Image
+#from PIL.Image import core as image
 import ImgOps as imgOps
 import Filters as filters
 import copy
 from math import *
-import numpy
 from HelpMenu import *
+
+import sys
+print(sys.path)
+
 
 bit_per_col = 5
 input_root = "Input/"

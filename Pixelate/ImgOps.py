@@ -1,4 +1,4 @@
-from PIL import Image
+#
 import copy
 import colorsys
 from math import *
