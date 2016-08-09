@@ -21,8 +21,17 @@ Eclipse (After repository pulled):
 
 
 ## Current Projects
-| Project | Language |
-| :---: | :---: |
-| RPG Animation Template | Java |
-| Paint Program Template | Java |
-| Pixelate | Python |
+This table is referencing the status of the basic code we are providing
+
+:white_check_mark: - Ready to use
+
+:warning: - in progress - incomplete but stable
+
+:x: - not ready to use
+
+
+| Project | Language | Status |
+| :---: | :---: | :---: |
+| RPG Animation Template | Java | :x: |
+| Paint Program Template | Java | :x: |
+| Pixelate | Python | :warning: |
