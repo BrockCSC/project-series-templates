@@ -2,7 +2,7 @@
 This repository contains templates for different styles of projects that may be freely used for the project series
 
 ## NOTES
-**NOTE :** These templates are strictly for the project series, and any other personal projects you wish to use them in. These templates are not to be used for assignments!
+**NOTE 1:** These templates are strictly for the project series, and any other personal projects you wish to use them in. These templates are not to be used for assignments!
 
 **NOTE 2:** The difficulty of the challenges is based using a first year student's perspective. If you are an upper year student please judge the difficulty for yourself. If there is a problem with the classification we have for a challenge please let us know!
 
