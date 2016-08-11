@@ -4,12 +4,28 @@
 This program written in Python, and does basic image manipulation.
 
 ### List of Features
-  - Can convert image to different color palette (color and grayscale)
+  - Convert image to different color palette (color and grayscale)
+  - Pixelate an image
 
 ### Planned Features
-  - Pixelate with different pixel sizes
   - Different filters
     - Different types of grayscale, sepia, other interesting filters
+  - Support different color schemes HSV, RGBI, etc.
+
+### Challenges
+Easy Challenges:
+  - Include help command to re-display overview help screen
+  - Implement grayscale
+  - Implement other filter
+  - Make menu look nicer and contain more information
+
+Meduim Challenges:
+  - Improve menu system error handling
+  - Blur filter, smudge filter, etc
+
+Hard Challenges:
+  - Manual Image rotation
+  - Other types of pixelate (Hexagonal, Triangular, etc)
 
 ## Getting Started
   1. Install [Python](https://www.python.org/)
