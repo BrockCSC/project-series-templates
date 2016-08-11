@@ -18,7 +18,7 @@ Easy
   - Remove one Mario
 
 Medium
-  - Make a map previewer (just display the map in the .txt file)
+  - Make a map previewer (graphically display the map in the .txt file)
   - Add in new blocks or sprites
 
 Hard
