@@ -2,9 +2,9 @@
 This repository contains templates for different styles of projects that may be freely used for the project series
 
 ## NOTES
-NOTE 1: These templates are strictly for the project series, and any other personal projects you wish to use them in. These templates are not to be used for assignments!
+**NOTE :** These templates are strictly for the project series, and any other personal projects you wish to use them in. These templates are not to be used for assignments!
 
-NOTE 2: The difficulty of the challenges is based using a first year student's perspective. If you are an upper year student please judge the difficulty for yourself. If there is a problem with the classification we have for a challenge please let us know!
+**NOTE 2:** The difficulty of the challenges is based using a first year student's perspective. If you are an upper year student please judge the difficulty for yourself. If there is a problem with the classification we have for a challenge please let us know!
 
 ## Getting Started with Github
 If you need help getting started with Github, please download our [instructional guide](https://drive.google.com/file/d/0B4JunSkTKIlKZGhuN1lqYUVhYmc/view) and follow the steps.
