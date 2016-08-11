@@ -1,3 +1,5 @@
+# Defines the text that is written when the help menu is called
+
 def print_controls():
 	print ("\n\n\n\n\n")
 	print ("Function \t\t Command \t\t\t Example")

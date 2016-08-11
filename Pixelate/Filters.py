@@ -1,3 +1,6 @@
+# The class that stores all of the filters and filter operations
+
+
 import copy
 from math import *
 import array
@@ -35,6 +38,7 @@ def gen_n_bit_colours(n, col_type):
 
 def convert_n_bit_image(img_list, bit_color, col_type):
     colours_n_bit = gen_n_bit_colours(bit_color, col_type)
+    print ("Converting Image")
     #values = convert_list_to_rgb(img_list)
     nvals = copy.deepcopy(img_list)
     for i in range(0, len(img_list)):
@@ -68,7 +72,7 @@ def pixelate(img_list, pixel_size, col_type):
     pixel_height, pixel_width = int(ceil(len(img_list[0])/pixel_size)), int(ceil(len(img_list)/pixel_size))
 
     nvals = copy.deepcopy(img_list)
-
+    print ("Converting Image")
     print ("height: " + str(len(img_list[0])) + "\twidth: " + str(len(img_list)))
     for i in range (0, pixel_height + 1):
         for j in range(0, pixel_width + 1):

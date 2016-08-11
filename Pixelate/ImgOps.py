@@ -1,3 +1,6 @@
+# Contains basic image operations like read and write
+# These include image level conversions. ie. Converting between RGB and HSV
+
 from PIL import Image
 import copy
 import colorsys
@@ -35,6 +38,7 @@ def save_image(values, name):
     image.putdata(values)
     # Saves the image
     image.save(name+'.png')
+    print ("Image Saved")
 
 
 def convert_list_to_rgb(values):

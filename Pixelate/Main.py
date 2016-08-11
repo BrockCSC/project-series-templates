@@ -1,4 +1,6 @@
 
+# The main control system of the program
+
 # Import allows us to use the other classes that we made
 import ImgOps as imgOps # Does the image operations like loading and saving the image
 import Filters as filters # Holds the funtions for the different filters implemented
@@ -65,10 +67,8 @@ while True:
 			print("You have entered an invalid number of parameters. Type \'pixelate help\' for more details")
 		else:
 			img_list = imgOps.set_up_image(input_root, image_name, image_ext)
-			print ("Converting Image")
 			new_img = filters.pixelate(img_list, int(command_parts[1]), command_parts[2])
 			imgOps.save_image(new_img, output_root+output_name)
-			print ("Image Saved")
 
 	elif (command_parts[0] == "colconvert"):
 		if (command_parts[1].lower() == "help"):
@@ -77,7 +77,5 @@ while True:
 			print ("You have entered an invalid number of parameters. Type \'colconvert help\' for more details")
 		else:
 			img_list = imgOps.set_up_image(input_root, image_name, image_ext)
-			print ("Converting Image")
 			new_img = filters.convert_n_bit_image (img_list, int(command_parts[1]), command_parts[2])
 			imgOps.save_image(new_img, output_root+output_name)
-			print ("Image Saved")
