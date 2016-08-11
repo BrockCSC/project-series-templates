@@ -6,6 +6,7 @@ import copy
 import colorsys
 from math import *
 
+# Returns a list of pixels after reading in the image
 def set_up_image(input_root, image_name, image_ext):
     image = Image.open(input_root+image_name+image_ext)
     img_list = convert_img_to_list(image)
@@ -40,7 +41,7 @@ def save_image(values, name):
     image.save(name+'.png')
     print ("Image Saved")
 
-
+# Converts a list of pixel colors from HSV to RGB
 def convert_list_to_rgb(values):
     new_values = copy.deepcopy(values)
     for i in range(0, len(values)):

@@ -1,5 +1,6 @@
 # Defines the text that is written when the help menu is called
 
+# Overview control commands
 def print_controls():
 	print ("\n\n\n\n\n")
 	print ("Function \t\t Command \t\t\t Example")
@@ -16,12 +17,14 @@ def print_controls():
 	print ("Convert color palette \t colconvert num_bits color_type")
 	print ("\n\n")
 
+# Pixelate commands
 def pixelate_help():
 	print ("Input \t\t\t pixelate pixel_size color_selection_method")
 	print ("pixel_size \t\t integer value (ex. 5) \n \t\t\t makes pixel to be that size square (ex. 5x5)")
 	print ("color_selection_method \t max, min, mean_col \n \t\t\t selects the max, min or average color from the group")
 	print("\n")
 
+# Color palette conversion commands
 def col_convert_help():
 	print ("Input \t\t\t colconvert num_bits color_type")
 	print ("num_bits \t\t integer value (ex. 5) \n \t\t\t Number of bits per color channel (ex. (2^5)^3 for \n \t\t\t 5 bits giving a 32,768-color palette)")
