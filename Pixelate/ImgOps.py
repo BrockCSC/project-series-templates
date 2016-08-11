@@ -1,4 +1,4 @@
-#
+from PIL import Image
 import copy
 import colorsys
 from math import *
@@ -6,6 +6,7 @@ from math import *
 def set_up_image(input_root, image_name, image_ext):
     image = Image.open(input_root+image_name+image_ext)
     img_list = convert_img_to_list(image)
+    return img_list
 
 # Convert the passed in image to a list of colours
 def convert_img_to_list(img):

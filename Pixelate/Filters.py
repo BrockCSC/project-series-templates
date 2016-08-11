@@ -34,13 +34,13 @@ def gen_n_bit_colours(n, col_type):
         return cols
 
 def convert_n_bit_image(img_list, bit_color, col_type):
-    colours_3_bit = gen_n_bit_colours(bit_color, col_type)
+    colours_n_bit = gen_n_bit_colours(bit_color, col_type)
     #values = convert_list_to_rgb(img_list)
     nvals = copy.deepcopy(img_list)
     for i in range(0, len(img_list)):
         for j in range(0, len(img_list[i])):
             #print(values[i][j])
-            nvals[i][j] = get_closest_col(img_list[i][j], colours_3_bit)
+            nvals[i][j] = get_closest_col(img_list[i][j], colours_n_bit)
             #print(nvals[i][j])
     return nvals
 
@@ -56,6 +56,13 @@ def mean_col(cols):
     return (r_avg, g_avg, b_avg)
 
 def pixelate(img_list, pixel_size, col_type):
+    if (col_type.lower() == "max"):
+        col_type = max
+    elif (col_type.lower() == "min"):
+        col_type = min
+    else:
+        col_type = mean_col
+    
     square_cols = []
     nvals = []
     pixel_height, pixel_width = int(ceil(len(img_list[0])/pixel_size)), int(ceil(len(img_list)/pixel_size))

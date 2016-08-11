@@ -1,11 +1,11 @@
-#from PIL.Image import core as image
-import ImgOps as imgOps
-import Filters as filters
-import copy
+
+# Import allows us to use the other classes that we made
+import ImgOps as imgOps # Does the image operations like loading and saving the image
+import Filters as filters # Holds the funtions for the different filters implemented
+from HelpMenu import * # contains the text for the help menu including a separate help for functions
+
 from math import *
-from HelpMenu import *
-import sys
-print(sys.path)
+
 
 bit_per_col = 5
 input_root = "Input/"
@@ -15,10 +15,6 @@ image_name = ""
 image_ext = ""
 output_name = ""
 
-# colours_6_bit = []
-#
-#
-#
 
 
 
@@ -71,16 +67,17 @@ while True:
 			img_list = imgOps.set_up_image(input_root, image_name, image_ext)
 			print ("Converting Image")
 			new_img = filters.pixelate(img_list, int(command_parts[1]), command_parts[2])
-			imgOps.save_image(new_img, output_root, output_name)
+			imgOps.save_image(new_img, output_root+output_name)
 			print ("Image Saved")
 
-
-
-
-
-#new_img = filters.pixelate(img_list, 15, filters.mean_col)#filters.convert_n_bit_image(img_list, bit_per_col, col_type)
-
-#imgOps.save_image(new_img, output_root + image_name +"-"+ (str(bit_per_col*3) if col_type == "c" else str(bit_per_col)) + "bit" + ("-gray" if col_type == "g" else "-full"))
-
-#
-# print("Program Finished")
+	elif (command_parts[0] == "colconvert"):
+		if (command_parts[1].lower() == "help"):
+			col_convert_help()
+		elif (len(command_parts) != 3):
+			print ("You have entered an invalid number of parameters. Type \'colconvert help\' for more details")
+		else:
+			img_list = imgOps.set_up_image(input_root, image_name, image_ext)
+			print ("Converting Image")
+			new_img = filters.convert_n_bit_image (img_list, int(command_parts[1]), command_parts[2])
+			imgOps.save_image(new_img, output_root+output_name)
+			print ("Image Saved")
