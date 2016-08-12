@@ -2,7 +2,10 @@ package ca.brockcsc.projectpaint;
 
 import java.awt.Dimension;
 import java.awt.GridLayout;
-
+import java.awt.Image;
+import java.io.File;
+import java.io.IOException;
+import javax.imageio.ImageIO;
 import javax.swing.*;
 
 
@@ -11,8 +14,17 @@ public class Main {
 	static Shape tmpShape = new Rectangle();
 	
 	public Main(){
+		Image frameIcon = null;
+		try {
+			 frameIcon = ImageIO.read(new File ("MenuIcons/frame_icon.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		// Create and set up a new frame
 		JFrame f = new JFrame("Project Paint");
+		f.setIconImage(frameIcon);
 		f.getContentPane().setPreferredSize(new Dimension(500,500));
 		f.pack();
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -22,6 +34,7 @@ public class Main {
 		
 		
 		JFrame menuFrame = new JFrame();
+		menuFrame.setIconImage(frameIcon);
 		menuFrame.setResizable(false);
 		menuFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
