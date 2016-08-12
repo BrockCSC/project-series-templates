@@ -13,7 +13,8 @@ public class Listeners implements MouseListener, MouseMotionListener, ActionList
 	boolean mousePressed = false;
 	private JFrame fCanv, fMenu;
 	private Canvas c;
-	Shape tmpShape = new Line();
+	private Shape tmpShape = new Line();
+	private String currentShape = "line";
 	
 	public void setTmpShape (Shape s){
 		tmpShape = s;
@@ -52,6 +53,7 @@ public class Listeners implements MouseListener, MouseMotionListener, ActionList
 	public void mousePressed(MouseEvent e) {
 		// TODO Auto-generated method stub
 		mousePressed = true;
+		createNewShape();
 		tmpShape.setPoint(e.getPoint());
 		c.repaint();
 	}
@@ -83,17 +85,29 @@ public class Listeners implements MouseListener, MouseMotionListener, ActionList
 		
 		switch(e.getActionCommand()){
 		case "menu_Rectangle Tool":
-			tmpShape = new Rectangle(Shape.Type.outline);
+			currentShape = "rect";
 			break;
 		case "menu_Filled Rectangle Tool":
-			tmpShape = new Rectangle(Shape.Type.solid);
+			currentShape = "fill_rect";
 			break;
 		case "menu_Line Tool":
-			tmpShape = new Line();
+			currentShape = "line";
 			break;
 		}
-		
-		
 	}
 
+	private void createNewShape(){
+		switch (currentShape){
+		case "line":
+			tmpShape = new Line();
+			break;
+		case "rect":
+			tmpShape = new Rectangle(Shape.Type.outline);
+			break;
+		case "fill_rect":
+			tmpShape = new Rectangle(Shape.Type.solid);
+			break;
+		}
+	}
+	
 }
