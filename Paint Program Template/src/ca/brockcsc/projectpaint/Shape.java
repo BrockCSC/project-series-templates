@@ -5,16 +5,17 @@ import java.awt.Point;
 
 public abstract class Shape {
 	
+	// Shapes can be 2 types, either an outline or a solid shape
 	public enum Type{
 		solid, outline
 	}
 	
-	//storing width and height
+	// Storing width and height
 	protected int x, y;
 	protected int width, height;
 	protected Type shapeType;
 	
-	//base getters and setters
+	// Base getters and setters
 	public void setX(int x){
 		this.x = x;
 	}
@@ -48,6 +49,7 @@ public abstract class Shape {
 	}
 	
 	// Abstract methods - each shape needs its own implementation
+	// to draw the shape
 	public abstract void drawShape(Graphics g);
 	
 	

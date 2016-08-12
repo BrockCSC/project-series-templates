@@ -8,18 +8,29 @@ import java.awt.event.MouseMotionListener;
 
 import javax.swing.JFrame;
 
+/*
+ * Holds all the listeners for the mouse and buttons for both frames
+ */
+
+
 public class Listeners implements MouseListener, MouseMotionListener, ActionListener{
 
-	boolean mousePressed = false;
+	
+	// Local variables, points to canvas and menu frames
+	private boolean mousePressed = false; // Tracks if user released mouse button
 	private JFrame fCanv, fMenu;
 	private Canvas c;
+	
+	// Holds current shape they are drawing, and the last shape that was selected from the menu
 	private Shape tmpShape = new Line();
 	private String currentShape = "line";
 	
-	public void setTmpShape (Shape s){
-		tmpShape = s;
-	}
 	
+/*	public void setTmpShape (Shape s){
+		tmpShape = s;
+	}*/
+	
+	// Constructor that passes in references to the frames and canvas
 	public Listeners (JFrame fCanv, JFrame fMenu, Canvas c){
 		this.fCanv = fCanv;
 		this.fMenu = fMenu;
@@ -27,9 +38,10 @@ public class Listeners implements MouseListener, MouseMotionListener, ActionList
 	}
 	
 	
+	// Mouse dragged event handler
+	// When mouse dragged, update the width of the width and height of the shape and repaint canvas
 	@Override
 	public void mouseDragged(MouseEvent e) {
-		// TODO Auto-generated method stub
 		tmpShape.setHeight((int)(e.getY() - tmpShape.getY()));
 		tmpShape.setWidth((int)(e.getX() - tmpShape.getX()));
 		c.drawing(true, tmpShape);
@@ -37,52 +49,55 @@ public class Listeners implements MouseListener, MouseMotionListener, ActionList
 		
 	}
 
+	// Mouse moved event handler
+	// When mouse is moved repaint the canvas
 	@Override
 	public void mouseMoved(MouseEvent e) {
-		// TODO Auto-generated method stub
 		c.repaint();
 	}
 
+	// Mouse clocked event handler
 	@Override
 	public void mouseClicked(MouseEvent e) {
-		// TODO Auto-generated method stub
 		
 	}
 
+	// Mouse pressed event handler
+	// When mouse pressed, create a new shape and set location and draw
 	@Override
 	public void mousePressed(MouseEvent e) {
-		// TODO Auto-generated method stub
 		mousePressed = true;
 		createNewShape();
 		tmpShape.setPoint(e.getPoint());
 		c.repaint();
 	}
 
+	// Mouse released event handler
+	// When mouse is released, swap flags and add shape to canvas
 	@Override
 	public void mouseReleased(MouseEvent e) {
-		// TODO Auto-generated method stub
 		mousePressed = false;
 		c.addShape(tmpShape);
 		c.drawing(false, tmpShape);
 		c.repaint();
 	}
 
+	// Mouse entered frame event handler
 	@Override
 	public void mouseEntered(MouseEvent e) {
-		// TODO Auto-generated method stub
 		c.repaint();
 	}
 
+	// Mouse dragged exited handler
 	@Override
 	public void mouseExited(MouseEvent e) {
-		// TODO Auto-generated method stub
 		c.repaint();
 	}
 
+	// Button pressed event handler
+	// Sets which menu item was last selected
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		
 		switch(e.getActionCommand()){
 		case "menu_Rectangle Tool":
 			currentShape = "rect";
@@ -96,6 +111,8 @@ public class Listeners implements MouseListener, MouseMotionListener, ActionList
 		}
 	}
 
+	// Sets the current working shape to a new shape based on last
+	// menu item selected
 	private void createNewShape(){
 		switch (currentShape){
 		case "line":
