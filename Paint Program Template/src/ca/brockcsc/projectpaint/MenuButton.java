@@ -25,7 +25,7 @@ public class MenuButton extends JButton{
 		this.setIcon(icon);
 		this.setToolTipText(desc);
 		
-		this.setBackground(Color.gray);
+		this.setBackground(Color.white);
 		
 		this.setActionCommand("menu_"+desc);
 		this.addActionListener(l);
