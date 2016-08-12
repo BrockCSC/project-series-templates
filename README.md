@@ -35,7 +35,7 @@ This table is referencing the status of the basic code we are providing
 | Project | Language | Status | Entry Point|
 | :---: | :---: | :---: | :---: |
 | Pixelate | Python | :warning: | Main.py |
-| MarioMashUp | Java | :warning: | MarioWindow.java | 
+| MarioMashUp | Java | :warning: | MarioWindow.java |
+| Paint Program Template | Java | :warning: | Main.java |
 | RPG Animation Template | Java | :x: | Main.java |
-| Paint Program Template | Java | :x: | Main.java |
 
