@@ -46,10 +46,6 @@ public class Listeners implements MouseListener, MouseMotionListener, ActionList
 	private String currentShape = "line";
 	
 	
-/*	public void setTmpShape (Shape s){
-		tmpShape = s;
-	}*/
-	
 	// Constructor that passes in references to the frames and canvas
 	public Listeners (JFrame fCanv, JFrame fMenu, Canvas c){
 		this.fCanv = fCanv;
