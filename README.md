@@ -11,14 +11,14 @@ If you need help getting started with Github, please download our [instructional
 
 ## Setup
 ### Java
-Eclipse (After repository pulled):
+**Eclipse** (After repository is pulled):
   1. Open Eclipse
   2. Set the workspace to the file directory containing all of the subfolders (RPG Animation Template, etc.)
   3. Select File > New > Java Project
   4. Where it asks for the project name type the name of the template you wish to use (ex. "RPG Animation Template")
   5. The project should now be set up and ready to use
 
-NetBeans (After repository is pulled):
+**NetBeans** (After repository is pulled):
   1. Open Netbeans
   2. Go to "File -> Import Project -> Eclipse Project"
   3. Select "Import project ignoring Project Dependencies"
@@ -50,8 +50,8 @@ This table is referencing the status of the basic code we are providing
 
 | Project | Language | Status | Entry Point|
 | :---: | :---: | :---: | :---: |
+| Paint Program Template | Java | :white_check_mark: | Main.java |
 | Pixelate | Python | :warning: | Main.py |
 | MarioMashUp | Java | :warning: | MarioWindow.java |
-| Paint Program Template | Java | :warning: | Main.java |
 | RPG Animation Template | Java | :x: | Main.java |
 
