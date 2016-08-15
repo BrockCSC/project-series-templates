@@ -18,6 +18,22 @@ Eclipse (After repository pulled):
   4. Where it asks for the project name type the name of the template you wish to use (ex. "RPG Animation Template")
   5. The project should now be set up and ready to use
 
+NetBeans (After repository is pulled):
+  1. Open Netbeans
+  2. Go to "File -> Import Project -> Eclipse Project"
+  3. Select "Import project ignoring Project Dependencies"
+  4. Select the folder containing the program you wish to work on (ex. "MarioMashUp") for the "Project to import"
+  5. Choose the destination folder of where you wish to have the converted project as the "Destination Folder"
+  6. Right click the project in the projects navigation on the left
+  7. Select properties
+  8. On the tab that opens up, at the bottom it says "Source/Binary format" Select JDK 8.
+  9. Press OK
+  10. The project is now set up, but you need to copy over the dependencies (The images, or input files, etc.). This will vary from project to project.
+  11. To do this, go to the original folder containing the source files
+  12. Copy the missing dependencies (When you run the project, it will tell you what files are missing and you need to locate. For example, for the paint program, you need to copy over the "MenuIcons" folder as it contains the images needed for the project)
+  13. Paste the files into the root directory of what you set as the "Destination Folder"
+  14. The project should have all the required dependencies, and should be ready to use.
+
 ### Other Language
   Please follow the steps in the project folder
 
