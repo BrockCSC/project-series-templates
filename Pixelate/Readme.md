@@ -24,8 +24,10 @@ Meduim Challenges:
   - Blur filter, smudge filter, etc
 
 Hard Challenges:
-  - Manual Image rotation
+  - Manual image rotation
   - Other types of pixelate (Hexagonal, Triangular, etc)
+  - Mosaic filter
+  - Dot painting filter
 
 ## Getting Started
   1. Install [Python](https://www.python.org/)
