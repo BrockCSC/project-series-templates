@@ -55,3 +55,14 @@ This table is referencing the status of the basic code we are providing
 | MarioMashUp | Java | :warning: | MarioWindow.java |
 | RPG Animation Template | Java | :x: | Main.java |
 
+
+## Problem with the Template?
+  Please submit an issue report using the Issues tab at the top of the page. Please look [here](https://github.com/BrockCSC/project-series-templates/issues/5) for an example of the formatting.
+
+### Issue Formatting
+  Title: [Project Template Name] Descriptive Issue Name
+  Leave a comment: Leave a detailed description of the issue. Examples of things to include are:
+  - A detailed decription of what is happening
+  - Stack trace if program crashes
+  - If you have done some debugging then let us know what your results were
+  - Any console output
