@@ -22,13 +22,18 @@ import java.awt.Point;
 
 
 /**
- * An example of a special tile
+ * An example of a special tile,
+ * this tile creates a basic tile with the specified image in BrickTile()
  * @author brad
  * @version 1.0
  * @since Aug 6, 2016
  */
 public class BrickTile extends BasicTile {
 
+	/**
+	 * Create a BasicTile with the specified image
+	 * @param p The point to create the tile at
+	 */
 	BrickTile(Point p) {
 		super(p, GraphicManagerSingleton.getInstance().retrieveImage("tiles-2-0-0"));
 	}

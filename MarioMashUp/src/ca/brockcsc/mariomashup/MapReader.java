@@ -32,6 +32,17 @@ import java.util.Scanner;
  */
 public class MapReader {
 
+	/** 
+	 * Programmer note: Static functions do not require an object to be executed
+	 * so this class never has to be initialized
+	 * 
+	 * Read a map into the provided ArrayList structures
+	 * @param f File that has an ascii text file wit h the map structure
+	 * @param into the tile ArrayList structures with a few layers, the first 
+	 * Arraylist respresents the layer.
+	 * @param entities the entities to place on the map no layers
+	 * @return the floor on the map, should be +tve integer
+	 */
 	static int readMap(File f, ArrayList<ArrayList<Drawable>> into, ArrayList<Entity> entities) {
 		int maxY = Integer.MAX_VALUE;
 		Scanner s = null;

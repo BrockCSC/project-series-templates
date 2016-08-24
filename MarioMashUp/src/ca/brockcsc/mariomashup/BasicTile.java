@@ -27,6 +27,8 @@ import java.awt.image.BufferedImage;
 
 /**
  * Implements a basic tile that only does collision
+ * this class can be extended in order to make special tiles
+ * as can be seen in BrickTile
  * @author brad
  * @version 1.0
  * @since Aug 5, 2016
@@ -36,6 +38,10 @@ public class BasicTile implements Collidable {
 	Rectangle location;
 	Image img;
 	
+	/**
+	 * @param p the top left point of the tile
+	 * @param img specify the actual image
+	 */
 	BasicTile(Point p, BufferedImage img) {
 		location = new Rectangle(p, new Dimension(img.getWidth(), img.getHeight()));
 		this.img = img;

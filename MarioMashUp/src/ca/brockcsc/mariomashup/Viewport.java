@@ -93,9 +93,9 @@ public class Viewport extends Canvas implements Runnable {
 			draw(graphics);
 			graphics.dispose();
 			strategy.show();
-			if (delta < 2) try { 
+			/*if (delta < 2) try { 
 				Thread.sleep(2-delta); 
-			} catch (Exception e) {};
+			} catch (Exception e) {};*/
 		}
 	}
 	
@@ -112,6 +112,7 @@ public class Viewport extends Canvas implements Runnable {
 
 				System.out.println("Killed");
 			}
+			// Make sure the entity is on screen
 			Rectangle r = e.getBoundingBox();
 			for(ArrayList<Drawable> layer: layers) {
 				for(Drawable d: layer) {

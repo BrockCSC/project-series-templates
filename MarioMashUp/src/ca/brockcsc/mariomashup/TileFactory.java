@@ -23,6 +23,10 @@ import java.awt.Point;
 /**
  * Builds tile objects based on the 
  * requested location in the tilemaps
+ * This class follows the Factory pattern. Whereas it is a class
+ * that generates objects of a super class. Additionally it could be
+ * implement an interface which would allow you to change the Factory object
+ * for another class
  * @author brad
  * @version 1.0
  * @since Aug 6, 2016
