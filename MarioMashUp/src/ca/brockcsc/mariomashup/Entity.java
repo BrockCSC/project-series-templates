@@ -29,13 +29,43 @@ import java.awt.Point;
  */
 public interface Entity extends Collidable {
 	
-	double getVelocityY();
+	/**
+	 * @return the downward velocity, falling is +tve.
+	 */
+	double getVelocityY();	
+	/**
+	 * @return the horizontal velocity, right is +tve.
+	 */
 	double getVelocityX();
+	/**
+	 * @param x instantaneously set the horizontal velocity of the
+	 * Entity to this value. Right is +tve.
+	 */
 	void setVelocityX(double x);
+	/**
+	 * @param y instantaneously set the vertical velocity of the 
+	 * Entity to this value. Down is +tve.
+	 */
 	void setVelocityY(double y);
+	/**
+	 * @param x instantaneously set the horizontal acceleration of the 
+	 * Entity to this value. Right is +tve
+	 */
 	void setAccX(double x);
+	/**
+	 * @param y instantaneously set the verticle acceleration of the
+	 * Entity to this value. Down is +tve
+	 */
 	void setAccY(double y);
+	
+	/**
+	 * @param p instantaneously set the location origin to this point.
+	 * Corresponds to the top left corner of the sprite.
+	 */
 	void setLocation(Point p);
+	/**
+	 * Set the boolean flag to say the Entity has landed
+	 */
 	void setLanded();
 	
 }

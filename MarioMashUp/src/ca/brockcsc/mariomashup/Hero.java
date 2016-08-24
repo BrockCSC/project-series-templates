@@ -32,6 +32,7 @@ import ca.brockcsc.mariomashup.KeyManager.Keys;
  * @since Aug 6, 2016
  */
 public class Hero implements Entity {
+	// Constant values
 	private static final String DEATH_FRAME_IMAGE = "characters-6-l";
 	private static final double SPRINT_ACCEL = 120.0;
 	private static final int WALK_MAX_SPEED = 64;
@@ -42,7 +43,9 @@ public class Hero implements Entity {
 	private static final int DRAG_MULTIPLIER = 3;
 	private static final double SLIDE_ACCEL = 256.0;
 	
+	// Location
 	private double locx, locy;
+	// Image strings
 	private String spriteprefix;
 	private String spriteprefixSmall;
 	
@@ -73,6 +76,7 @@ public class Hero implements Entity {
 	private double accx = 0;
 	private double accy = 0;
 	
+	// Keyboard actions
 	private boolean holdingright = false;
 	private boolean holdingleft = false;
 	private boolean holdingrun = false;
@@ -118,26 +122,28 @@ public class Hero implements Entity {
 	 */
 	@Override
 	public void update(long delta) {
+		// If dieing, skip the update phase
 		if (isDieing) {
 			return;
 		}
 		
 		KeyManager km = KeyManager.getInstance();
-		
+		// If holding not holding down and crouching
+		// stand up
 		if (!km.getKey(Keys.DOWN) && crouching) {
 			crouching = false;
 			locy -= 16;
 		}
-		
+		// If not crouching, big and holding down crouch
 		if (!crouching && km.getKey(Keys.DOWN) && big) {
 			crouching = true;
 			locy += 16;
 		} 
-		
+		// Check if the player is holding right, left and/or running
 		holdingright = km.getKey(Keys.RIGHT) && !crouching;
 		holdingleft = km.getKey(Keys.LEFT) && !crouching;
 		holdingrun = km.getKey(Keys.B);
-		
+		// If were trying to move do this
 		if (holdingright || holdingleft) {
 
 			if (holdingright) {
@@ -154,7 +160,7 @@ public class Hero implements Entity {
 			} else if (accx < 0 && facingright) { // Sliding
 				facingright = !facingright;
 			}
-			// If not holding left or right
+		// If not holding left or right
 		} else {
 			// Acceleration in the opposite direction of velocity as drag
 			accx = -velx * DRAG_MULTIPLIER;
@@ -164,7 +170,7 @@ public class Hero implements Entity {
 			}
 		}
 		
-		if (landed && vely > 1.5) {// We dropped
+		if (landed && vely > 1.5) {// We are falling
 			landed = false;
 		}
 
@@ -189,14 +195,17 @@ public class Hero implements Entity {
 			timeShrinkingAnimation = 0;
 			isShrinking = false;
 		}
+		// Add to the iframes counter
 		if (hasIFrames) {
 			iframes += delta;
 		}
+		// If we have been flashing for long enough,
+		// stop flashing
 		if (iframes > NUMIFRAMES) {
 			iframes = 0;
 			hasIFrames = false;
 		}
-		
+		// Increase the sprite animation timer
 		timeAnimation += timeFrameMultiplier * delta;	
 	}
 	

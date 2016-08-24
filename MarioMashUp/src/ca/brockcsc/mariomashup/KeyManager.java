@@ -24,6 +24,7 @@ import java.util.EnumMap;
 /**
  * Manages accessing key presses from
  * a global context singleton class
+ * similar design pattern is explained in GraphicManager
  * @author brad
  * @version 1.0
  * @since Aug 6, 2016
@@ -34,6 +35,12 @@ public class KeyManager {
 	private EnumMap<Keys, Boolean> keymap;
 	
 	
+	/**
+	 * This enum is a structure that maps readable names to integer values
+	 * comparing to these values is O(1) rather than O(n) if strings are used.
+	 * 
+	 * Keys represents the valid set of Keys
+	 */
 	public enum Keys {
 		UP,
 		DOWN,
@@ -70,6 +77,8 @@ public class KeyManager {
 	
 	/** 
 	 * Update the KeyManager with keys pressed
+	 * This function is a callback function called from the main 
+	 * EventQueue for the GUI it is synchronized to prevent data races
 	 * @param k
 	 */
 	public synchronized void signal(KeyEvent k) {

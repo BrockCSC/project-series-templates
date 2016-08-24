@@ -30,7 +30,10 @@ import javax.imageio.ImageIO;
 
 /**
  * Manages loading images and getting them from
- * any context
+ * any context, uses a singleton pattern. Therefore you may
+ * only have one instance of this class per running application.
+ * You get the only instance by calling getInstance()
+ * which is the convention for Java.
  * @author brad
  * @version 1.0
  * @since Aug 6, 2016
@@ -43,6 +46,7 @@ public class GraphicManagerSingleton {
 	private HashMap<String, ArrayList<BufferedImage>> animatedmap;
 	
 	private GraphicManagerSingleton() {
+		// new HashMap<>(); infers the generic type from the variable type
 		staticmap = new HashMap<>();
 		animatedmap = new HashMap<>();
 		
@@ -50,27 +54,46 @@ public class GraphicManagerSingleton {
 
 	}
 
+	/**
+	 * @return the only instance of this class
+	 * if it does not exist, we create one
+	 */
 	public static GraphicManagerSingleton getInstance() {
 		if (i == null)
 			i = new GraphicManagerSingleton();
 		return i;
 	}
 	
+	/**
+	 * @param img unique id string of the image to return
+	 * @return a buffered image
+	 */
 	public BufferedImage retrieveImage(String img) {
 		return staticmap.get(img);
 	}
+	/**
+	 * @param img unique id string of the image to return
+	 * @param frame frame for images that use the sprite sheet engine
+	 * @return a buffered image
+	 */
 	public BufferedImage retrieveImageFrame(String img, int frame) {
 		return animatedmap.get(img).get(frame);
 	}
 	
+	/**
+	 * Read settings from the static file sprite/settings.txt
+	 * and open each file based on the settings on each line.
+	 */
 	private void readSettings() {
 		Scanner s = null;
+		// Open the file with a text scanner
 		try {
 			s = new Scanner(new File("sprite/settings.txt"));
 		} catch (FileNotFoundException e) {
 			System.err.format("Cannot read sprite/settings.txt \n%s\n", e);
 			System.exit(1);
 		}
+		// While we have more tokens read the next line
 		while(s.hasNext()) {
 			String filename = s.next();
 			String type = s.next();
@@ -96,6 +119,14 @@ public class GraphicManagerSingleton {
 		
 	}
 	
+	/**
+	 * This is the static image storage engine each image
+	 * in this section is a sheet of sprites and not animations
+	 * @param prefix name given to the set of images
+	 * @param img image itself to split
+	 * @param engine additional string parameters(unused)
+	 * @param pixels number of pixels square for each image
+	 */
 	private void readStatic(String prefix, BufferedImage img, String engine, int pixels) {
 		for (int row = 0; row < img.getHeight() / pixels; ++row) {
 			for (int col = 0; col < img.getWidth() / pixels; ++col) {
@@ -105,17 +136,25 @@ public class GraphicManagerSingleton {
 		}
 	}
 	
+	/**
+	 * @param prefix name given to this set of images
+	 * @param img image itself to split
+	 * @param engine additional string parameters
+	 * @param pixelsx number of horizontal pixels per frame
+	 * @param pixelsy number of vertical pixels per frame
+	 */
 	private void readAnimationFlipped(String prefix, BufferedImage img, String engine, int pixelsx, int pixelsy) {
 		ArrayList<BufferedImage> buffer = new ArrayList<>();
 		for(int i = 0; i < img.getWidth() / (pixelsx * 2); ++i) {
 			buffer.add(null);
 		}
+		// For each row split the image into each animation frame
+		// inside out, so 0 is the middle row
 		for (int row = 0; row < img.getHeight() / pixelsy; ++row) {
 			animatedmap.put(prefix + "-" + row + "-" + "l", new ArrayList<BufferedImage>(buffer));
 			animatedmap.put(prefix + "-" + row + "-" + "r", new ArrayList<BufferedImage>(buffer));
 			for (int col = 0; col < img.getWidth() / pixelsx; ++col) {
 				BufferedImage bf = img.getSubimage(col * pixelsx, row * pixelsy, pixelsx, pixelsy);
-				// TODO simplify this
 				if (col < (img.getWidth() / pixelsx) / 2) 
 					animatedmap.get(prefix + "-" + row + "-" + "l").set(((img.getWidth() / pixelsx) / 2) - 1 - col, bf);
 				else
