@@ -25,7 +25,7 @@ def print_controls():
 	print ("Function \t\t Command \t\t\t Example")
 	print ("-------------------------------------------------------------------------------")
 	print ("Quit Program \t\t quit or exit")
-	print ("Setting Image \t\t image name.extension \t\t image puppy.jpg")
+	print ("Setting Image \t\t image name.extension \t\t image puppy.png")
 	print ("Setting Save Name \t out_name file_name \t\t out_name new_picture")
 	print ("Set Input Directory \t in_dir directory_path \t\t in_dir Images")
 	print ("Set Output Directory \t out_dir directory_path \t out_dir Output")
