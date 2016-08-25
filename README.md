@@ -51,8 +51,8 @@ This table is referencing the status of the basic code we are providing
 | Project | Language | Status | Entry Point|
 | :---: | :---: | :---: | :---: |
 | Paint Program Template | Java | :white_check_mark: | Main.java |
-| Pixelate | Python | :warning: | Main.py |
-| MarioMashUp | Java | :warning: | MarioWindow.java |
+| Pixelate | Python | :white_check_mark: | Main.py |
+| MarioMashUp | Java | :white_check_mark: | MarioWindow.java |
 | RPG Animation Template | Java | :x: | Main.java |
 
 
