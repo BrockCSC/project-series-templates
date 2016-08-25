@@ -16,6 +16,7 @@ WASD for arrow keys, '.' is b (running) '/' is a (jumping) (this is closer to th
 Easy
   - Manually make a couple of maps
   - Remove one Mario
+  - Add reset button
 
 Medium
   - Make a map previewer (graphically display the map in the .txt file)
