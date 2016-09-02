@@ -7,7 +7,7 @@ This repository contains templates for different styles of projects that may be 
 **NOTE 2:** The difficulty of the challenges is based using a first year student's perspective. If you are an upper year student please judge the difficulty for yourself. If there is a problem with the classification we have for a challenge please let us know!
 
 ## Getting Started with Github
-If you need help getting started with Github, please download our [instructional guide](https://drive.google.com/file/d/0B4JunSkTKIlKZGhuN1lqYUVhYmc/view) and follow the steps.
+If you need help getting started with Github, please download our [instructional guide](https://github.com/BrockCSC/coding-tutorials/blob/master/INTRO%20TO%20GIT/Git%20'er%20Done%20Workshop.pdf) and follow the steps.
 
 ## Setup
 ### Java
