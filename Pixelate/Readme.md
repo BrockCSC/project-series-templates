@@ -28,6 +28,7 @@ Hard Challenges:
   - Other types of pixelate (Hexagonal, Triangular, etc)
   - Mosaic filter
   - Dot painting filter
+  - Use K-Means for image compression
 
 ## Getting Started
   1. Install [Python](https://www.python.org/)
