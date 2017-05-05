@@ -28,6 +28,8 @@ Hard Challenges:
   - Other types of pixelate (Hexagonal, Triangular, etc)
   - Mosaic filter
   - Dot painting filter
+  
+ Very Hard Challenges:
   - Use K-Means for image compression
 
 ## Getting Started
